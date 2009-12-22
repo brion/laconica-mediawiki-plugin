@@ -1,4 +1,4 @@
-= MediaWiki Plugin for Laconica v0.1 =
+= MediaWiki Plugin for StatusNet v0.1 =
 
 Converts MediaWiki-style freelinks into Wiki links:
 
@@ -11,13 +11,12 @@ choice.
 
 Copy MediaWikiPlugin.php into the plugins directory.
 
-Edit WIKI_BASE_URL in MediaWiikiPlugin.php to point to your Wiki's
-base URL.
-
 Add the following to config.php:
 
-    require_once('plugins/MediaWikiPlugin.php');
-    $wl = new MediaWikiPlugin();
+    addPlugin('MediaWiki',
+      array('base_url' => 'http://en.wikipedia.org/wiki/'));
+
+Use the article URL base for the wiki you wish to link to.
 
 Enjoy!
 
